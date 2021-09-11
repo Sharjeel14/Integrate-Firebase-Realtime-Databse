@@ -39,6 +39,9 @@ export default class App extends React.Component {
         <Text style={styles.heading2}>Fetch Date From Firebase Realtime Database</Text>
         <Text style={styles.flat}>FLatList</Text>
 
+
+                {/* FlatList display data from Firebase Realtime Database */}
+
         <FlatList
           data={this.state.arrayFlatList}
           renderItem={({item}) => (
