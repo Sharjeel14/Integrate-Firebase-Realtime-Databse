@@ -1,14 +1,8 @@
 import React from 'react';
 import database from '@react-native-firebase/database';
-import firestore from '@react-native-firebase/firestore';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
-  useColorScheme,
-  View,
+  Text,View,
   FlatList,
   SectionList,
   Image,
@@ -25,21 +19,7 @@ export default class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    
-    // firestore()
-    // .collection('Students')
-    // .get()
-    // .then(querySnapshot => {
-    //   // console.log('Total users: ', querySnapshot.size);
-    //   querySnapshot.forEach(documentSnapshot => {
-    //     // console.log('User ID: ', documentSnapshot.id, documentSnapshot.data());
-    //     this.setState({arrayFlatList: documentSnapshot.data()});
-    //     console.log(this.state.arrayFlatList);
-        
-    //   });
-    // });
-    
+  componentDidMount() {  
     
     database()
       .ref('/Students')
@@ -56,7 +36,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.heading1}>Assignment - Firebase - FlatList</Text>
-        <Text style={styles.heading2}>Fetch Date From Firebase</Text>
+        <Text style={styles.heading2}>Fetch Date From Firebase Realtime Database</Text>
         <Text style={styles.flat}>FLatList</Text>
 
         <FlatList
